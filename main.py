@@ -62,7 +62,7 @@ async def connect_to_mongo():
     """Create database connection"""
     try:
         # Get MongoDB URL from environment or use default
-        mongodb_url = os.getenv("MONGODB_URL", "mongodb://localhost:27017")
+        mongodb_url = os.getenv("MONGODB_URL", "mongodb+srv://profesor:root@cluster0.6kpph5n.mongodb.net/")
         db_name = os.getenv("MONGODB_DB_NAME", "wallet_app")
         
         db.client = AsyncIOMotorClient(mongodb_url)
